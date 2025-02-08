@@ -1,0 +1,5 @@
+<resources>
+    <string name="creatorName">Created by Alhifny Wahid</string>
+    <string name="title_favorite">favorite</string>
+    <string name="imgSrc"><![CDATA[https://jobs.dicoding.com/_next/image?url=https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/jobs/%1$s&w=256&q=75]]></string>
+</resources>

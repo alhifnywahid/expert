@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/bg_card"
+    android:orientation="horizontal"
+    android:paddingHorizontal="8dp">
+
+    <ImageView
+        android:id="@+id/imgJobs"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:importantForAccessibility="no"
+        android:maxWidth="100dp"
+        android:maxHeight="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/load_image"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgJobs"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/CustomText1"
+            android:importantForAccessibility="no"
+            android:text="@null"
+            android:textColor="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/CustomIcon"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_mitra" />
+
+            <TextView
+                android:id="@+id/companyName"
+                style="@style/CustomText2"
+                android:importantForAccessibility="no"
+                android:text="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/CustomIcon"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_tempat" />
+
+            <TextView
+                android:id="@+id/location"
+                style="@style/CustomText2"
+                android:importantForAccessibility="no"
+                android:text="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/CustomIcon"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_pengalaman" />
+
+            <TextView
+                android:id="@+id/experience"
+                style="@style/CustomText2"
+                android:importantForAccessibility="no"
+                android:text="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/CustomIcon"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_work" />
+
+            <TextView
+                android:id="@+id/type"
+                style="@style/CustomText2"
+                android:importantForAccessibility="no"
+                android:text="@null" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
