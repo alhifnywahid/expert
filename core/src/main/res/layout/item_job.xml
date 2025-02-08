@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="10dp"
@@ -44,11 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 style="@style/CustomIcon"
                 android:layout_marginEnd="10dp"
+                android:contentDescription="@string/icon_mitra"
                 android:src="@drawable/ic_mitra" />
 
             <TextView
@@ -62,11 +65,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 style="@style/CustomIcon"
                 android:layout_marginEnd="10dp"
+                android:contentDescription="@string/icon_location"
                 android:src="@drawable/ic_tempat" />
 
             <TextView
@@ -80,11 +85,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 style="@style/CustomIcon"
                 android:layout_marginEnd="10dp"
+                android:contentDescription="@string/icon_experience"
                 android:src="@drawable/ic_pengalaman" />
 
             <TextView
@@ -98,11 +105,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
 
             <ImageView
                 style="@style/CustomIcon"
                 android:layout_marginEnd="10dp"
+                android:contentDescription="@string/icon_typejob"
                 android:src="@drawable/ic_work" />
 
             <TextView

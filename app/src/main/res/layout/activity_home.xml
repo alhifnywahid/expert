@@ -25,11 +25,15 @@
         tools:ignore="SpeakableTextPresentCheck"
         tools:listitem="@layout/item_job" />
 
-    <include
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/loader"
-        layout="@layout/loader"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loader"
+        tools:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

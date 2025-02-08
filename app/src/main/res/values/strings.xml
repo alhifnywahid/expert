@@ -6,4 +6,6 @@
     <string name="tambahFavorite">+ Favorite</string>
     <string name="uriJob">https://jobs.dicoding.com/%1$s/%2$s/%3$s</string>
     <string name="djobs">DJobs</string>
+    <string name="addFavorite">+ Favorite</string>
+    <string name="haveSave">Tersimpan</string>
 </resources>

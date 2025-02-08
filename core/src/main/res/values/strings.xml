@@ -2,4 +2,8 @@
     <string name="creatorName">Created by Alhifny Wahid</string>
     <string name="title_favorite">favorite</string>
     <string name="imgSrc"><![CDATA[https://jobs.dicoding.com/_next/image?url=https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/jobs/%1$s&w=256&q=75]]></string>
+    <string name="icon_mitra">Icon Mitra</string>
+    <string name="icon_location">Icon Location</string>
+    <string name="icon_experience">Icon Experience</string>
+    <string name="icon_typejob">Icon TypeJob</string>
 </resources>

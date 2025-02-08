@@ -60,8 +60,8 @@ class DetailActivity : AppCompatActivity() {
             toopbar.visibility = visibility
             svData.visibility = visibility
             layoutBtn.visibility = visibility
-            loader.item.visibility = loaderVisibility
-            loader.item.run {
+            loader.visibility = loaderVisibility
+            loader.run {
                 if (state) playAnimation() else cancelAnimation()
             }
         }
@@ -93,7 +93,10 @@ class DetailActivity : AppCompatActivity() {
                     status = !status
                     detailViewModel.setFavJob(job, status)
                 }
-                text = if (!status) "+ Favorite" else "Tersimpan"
+                text = when (!status) {
+                    true -> context.getString(R.string.addFavorite)
+                    else -> context.getString(R.string.haveSave)
+                }
             }
         }
         setVisibility(true)
@@ -103,7 +106,10 @@ class DetailActivity : AppCompatActivity() {
         lifecycleScope.launch {
             detailViewModel.favoriteJob.collect { job ->
                 status = job.any { it.id == id }
-                viewBinding.addToFavorite.text = if (!status) "+ Favorite" else "Tersimpan"
+                viewBinding.addToFavorite.text = when (!status) {
+                    true -> this@DetailActivity.getString(R.string.addFavorite)
+                    else -> this@DetailActivity.getString(R.string.haveSave)
+                }
             }
         }
     }

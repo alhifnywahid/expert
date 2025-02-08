@@ -115,9 +115,9 @@ class HomeActivity : AppCompatActivity() {
 
     private fun setVisibility(state: Boolean) {
         with(binding) {
-            loader.item.visibility = if (state) View.VISIBLE else View.GONE
+            loader.visibility = if (state) View.VISIBLE else View.GONE
             rvJob.visibility = if (state) View.GONE else View.VISIBLE
-            loader.item.run {
+            loader.run {
                 if (state) playAnimation() else cancelAnimation()
             }
         }

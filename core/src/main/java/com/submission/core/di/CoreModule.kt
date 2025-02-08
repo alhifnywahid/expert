@@ -14,8 +14,8 @@ import com.submission.core.domain.usecase.JobInteractor
 import com.submission.core.domain.usecase.JobUseCase
 import net.sqlcipher.database.SQLiteDatabase
 import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
-import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -33,17 +33,18 @@ val coreModule = module {
     single<JobUseCase> { provideJobInteractor(get()) }
 }
 
+
 private fun provideChuckerInterceptor(context: Context): ChuckerInterceptor {
     return ChuckerInterceptor.Builder(context).build()
 }
 
 private fun provideOkHttpClient(chuckerInterceptor: ChuckerInterceptor): OkHttpClient {
-    val loggingInterceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY
-    }
+    val certificatePinner = CertificatePinner.Builder()
+        .add("jobs.dicoding.com", "sha256/s5BoykB5XSK6MLIgqoC/sXnz+mS1cj5Dqt2M3G8OPYY=")
+        .build()
     return OkHttpClient.Builder()
         .addInterceptor(chuckerInterceptor)
-        .addInterceptor(loggingInterceptor)
+        .certificatePinner(certificatePinner)
         .build()
 }
 
